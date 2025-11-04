@@ -60,7 +60,7 @@ This project implements a **production-ready real-time data streaming pipeline**
 ## 🏗️ Architecture
 
 <div align="center">
-  <img src="Data_engineering_architecture.png" alt="System Architecture" width="800"/>
+  <img src="Data engineering architecture.png" alt="System Architecture" width="800"/>
 </div>
 
 ### **Component Breakdown:**
