@@ -367,8 +367,8 @@ docker exec -it cassandra nodetool tablestats spark_streams.created_users
 **Mulaye Muhammad Ahmed Brahim**
 
 [![GitHub](https://img.shields.io/badge/GitHub-MulayeMuhammad-181717?logo=github)](https://github.com/MulayeMuhammad)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://www.linkedin.com/in/your-profile)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?logo=gmail)](mailto:your.email@example.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?logo=linkedin)](https://www.linkedin.com/in/moulayeahmedbrahim/)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?logo=gmail)](mailto:mulayemuhammad@gmail.com)
 
 **Project Link:** [https://github.com/MulayeMuhammad/RealTime_Data_Streaming](https://github.com/MulayeMuhammad/RealTime_Data_Streaming)
 
