@@ -30,10 +30,6 @@
 - [Project Structure](#-project-structure)
 - [Data Flow](#-data-flow)
 - [Monitoring](#-monitoring)
-- [Troubleshooting](#-troubleshooting)
-- [Future Enhancements](#-future-enhancements)
-- [Contributing](#-contributing)
-- [License](#-license)
 - [Contact](#-contact)
 
 ---
@@ -92,29 +88,7 @@ This project implements a **production-ready real-time data streaming pipeline**
 - ✅ **Monitoring**: Built-in observability with Kafka Control Center
 - ✅ **Containerized**: Easy deployment with Docker Compose
 
-### **Technical Highlights:**
 
-```python
-# Stream Processing with Spark
-- Micro-batch processing (2-second intervals)
-- Exactly-once semantics with checkpointing
-- Parallel processing across 4 worker nodes
-- Automatic schema validation
-
-# Data Ingestion
-- Scheduled DAGs with Airflow
-- 100+ messages per minute throughput
-- JSON data transformation
-- UUID generation for unique records
-
-# Data Storage
-- Distributed writes to Cassandra
-- Primary key-based partitioning
-- Configurable replication factor
-- CQL query interface
-```
-
----
 
 ## 🛠️ Tech Stack
 
@@ -386,127 +360,7 @@ docker exec -it cassandra nodetool tablestats spark_streams.created_users
 
 ---
 
-## 🐛 Troubleshooting
 
-### **Common Issues:**
-
-<details>
-<summary><b>Services won't start</b></summary>
-
-```bash
-# Check Docker resources
-docker system df
-
-# Restart all services
-docker-compose down
-docker-compose up -d
-```
-</details>
-
-<details>
-<summary><b>Kafka connection errors</b></summary>
-
-```bash
-# Verify Kafka is running
-docker exec -it broker kafka-topics --list --bootstrap-server localhost:9092
-
-# Check broker logs
-docker logs broker
-```
-</details>
-
-<details>
-<summary><b>Spark streaming fails</b></summary>
-
-```bash
-# Check Spark logs
-docker logs spark-master
-
-# Verify Cassandra connection
-docker exec -it cassandra cqlsh -e "DESCRIBE KEYSPACES;"
-```
-</details>
-
-<details>
-<summary><b>No data in Cassandra</b></summary>
-
-```bash
-# Verify Kafka has messages
-docker exec -it broker kafka-console-consumer \
-  --bootstrap-server broker:29092 \
-  --topic users_created \
-  --from-beginning \
-  --max-messages 5
-
-# Check if Airflow DAG succeeded
-docker exec -it realtime_data_streaming-webserver-1 \
-  airflow dags list-runs -d user_automation
-```
-</details>
-
----
-
-## 🚀 Future Enhancements
-
-### **Planned Features:**
-
-- [ ] **Real-time Dashboard**: Grafana visualization
-- [ ] **Data Quality Checks**: Great Expectations integration
-- [ ] **Multiple Data Sources**: REST APIs, webhooks, databases
-- [ ] **Machine Learning**: Spark MLlib for real-time predictions
-- [ ] **Auto-scaling**: Kubernetes deployment
-- [ ] **Advanced Analytics**: Spark SQL queries on streaming data
-- [ ] **Alerting**: PagerDuty/Slack notifications on failures
-- [ ] **Data Lake**: Integration with S3/HDFS for long-term storage
-- [ ] **CI/CD Pipeline**: GitHub Actions for automated deployment
-- [ ] **Security**: SSL/TLS encryption, authentication, RBAC
-
-### **Scalability Improvements:**
-
-```yaml
-# Production Configuration
-Kafka:
-  - Partitions: 10-50
-  - Replication Factor: 3
-  - Compression: snappy
-
-Spark:
-  - Workers: 10-100
-  - Executor Memory: 8-16GB
-  - Cores per Executor: 4-8
-
-Cassandra:
-  - Nodes: 3-10
-  - Replication Factor: 3
-  - Consistency Level: QUORUM
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork** the repository
-2. **Create** a feature branch (`git checkout -b feature/AmazingFeature`)
-3. **Commit** your changes (`git commit -m 'Add some AmazingFeature'`)
-4. **Push** to the branch (`git push origin feature/AmazingFeature`)
-5. **Open** a Pull Request
-
-### **Development Guidelines:**
-
-- Follow PEP 8 style guide for Python code
-- Add tests for new features
-- Update documentation
-- Ensure all tests pass before submitting PR
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## 📞 Contact
 
@@ -518,20 +372,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Project Link:** [https://github.com/MulayeMuhammad/RealTime_Data_Streaming](https://github.com/MulayeMuhammad/RealTime_Data_Streaming)
 
----
 
-## 🙏 Acknowledgments
-
-- [Random User API](https://randomuser.me/) for providing test data
-- [Apache Software Foundation](https://apache.org/) for amazing open-source tools
-- [Confluent](https://www.confluent.io/) for Kafka Docker images
-- Data engineering community for inspiration and support
 
 ---
 
 <div align="center">
 
-**⭐ Star this repo if you found it helpful!**
 
 Made with ❤️ by [Mulaye Muhammad](https://github.com/MulayeMuhammad)
 
