@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Airflow
+airflow.db
+airflow.cfg
+logs/
+*.log
+unittests.cfg
+
+# Docker
+.docker/
+*.tar
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Spark
+metastore_db/
+spark-warehouse/
+derby.log
+
+# Cassandra
+data/
+commitlog/
+saved_caches/
+
+# Secrets
+.env
+.env.local
+*.pem
+*.key
+secrets/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Kafka
+kafka-logs/
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~.nib
